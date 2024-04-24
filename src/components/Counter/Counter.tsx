@@ -1,26 +1,16 @@
 import "./styles.css";
 import Button from "../Button/Button";
-import { useState } from "react";
 
-function Counter() {
-  const [count, setCount] = useState<number>(0);
-
-  const onMinus = () => {
-    setCount((prevValue) => prevValue - 1);
-  };
-
-  const onPlus = () => {
-    setCount((prevValue) => prevValue + 1);
-  };
-
+//ДЗ  - типизировать props компонента
+function Counter({ countValue, onMinusClick, onPlusClick }: any) {
   return (
     <div className="counter-wrapper">
       <div className="button-control">
-        <Button onButtonClick={onMinus} name="-" />
+        <Button onButtonClick={onMinusClick} name="-" />
       </div>
-      <p>{count}</p>
+      <p>{countValue}</p>
       <div className="button-control">
-        <Button onButtonClick={onPlus} name="+" />
+        <Button onButtonClick={onPlusClick} name="+" />
       </div>
     </div>
   );
