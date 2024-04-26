@@ -14,6 +14,7 @@ function Lesson08() {
   const typeButton = true;
 
   return (
+    // = <div class='lesson08-container'>
     <Lesson08Component>
       <BoxComponent>My first emotion block</BoxComponent>
       <ButtonComponent mainButton={typeButton}>Custom button</ButtonComponent>
