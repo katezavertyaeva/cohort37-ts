@@ -19,6 +19,7 @@ import Layout from 'components/Layout/Layout';
 
 // Consultations
 // import Consultation04 from 'consultations/Consultation04/Consultation04';
+import Consultation05 from 'consultations/Consultation05/Consultation05';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       {/* <Lesson11 /> */}
       {/* <Homework11 /> */}
       {/* <Lesson12 /> */}
+      <Consultation05 />
     </>
   );
 }

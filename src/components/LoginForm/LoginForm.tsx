@@ -26,6 +26,7 @@ function LoginForm() {
     validationSchema: shema,
     validateOnMount: false,
     validateOnChange: false,
+    validateOnBlur: true,
     onSubmit: (values: LoginFormValues) => {
       console.log(values);
     },
@@ -45,6 +46,7 @@ function LoginForm() {
           onInputChange={formik.handleChange}
           value={formik.values[LOGIN_FIELD_NAMES.EMAIL]}
           error={formik.errors[LOGIN_FIELD_NAMES.EMAIL]}
+          onBlur={formik.handleBlur}
         />
         <Input
           name={LOGIN_FIELD_NAMES.PASSWORD}
@@ -54,9 +56,11 @@ function LoginForm() {
           onInputChange={formik.handleChange}
           value={formik.values[LOGIN_FIELD_NAMES.PASSWORD]}
           error={formik.errors[LOGIN_FIELD_NAMES.PASSWORD]}
+          onBlur={formik.handleBlur}
         />
       </InputsContainer>
       <Button type="submit" name="Login" />
+      <div>{formik.values[LOGIN_FIELD_NAMES.EMAIL]}</div>
     </LoginFormComponent>
   );
 }

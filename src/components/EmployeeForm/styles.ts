@@ -23,3 +23,20 @@ export const CheckboxContainer = styled.div`
   align-items: center;
   gap: 10px;
   `
+export const CardFormComponent = styled.div`
+display: flex;
+flex-direction: column;
+gap: 30px;
+width: 590px;
+height: 600px;
+padding: 60px;
+border: 2px solid black;
+border-radius: 6px;
+margin-top: 50px;
+background-color: #b3c5e8;
+`;
+
+export const FormWrapper = styled.div`
+display: flex;
+gap: 30px;
+`;
