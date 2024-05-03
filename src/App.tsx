@@ -1,5 +1,10 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import GlobalStyles from 'styles/GlobalStyles';
 import Layout from 'components/Layout/Layout';
+import About from 'pages/About/About';
+import Home from 'pages/Home/Home';
+import Users from 'pages/Users/Users';
 
 // Lessons
 // import Lesson06 from 'lessons/Lesson06/Lesson06';
@@ -19,14 +24,21 @@ import Layout from 'components/Layout/Layout';
 
 // Consultations
 // import Consultation04 from 'consultations/Consultation04/Consultation04';
-import Consultation05 from 'consultations/Consultation05/Consultation05';
+// import Consultation05 from 'consultations/Consultation05/Consultation05';
 
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyles />
-      <Layout />
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='*' element='Page Not Found'/>
+        </Routes>
+      </Layout>
       {/* <Lesson06 /> */}
       {/* <Lesson07 /> */}
       {/* <Homework07 /> */}
@@ -39,8 +51,8 @@ function App() {
       {/* <Lesson11 /> */}
       {/* <Homework11 /> */}
       {/* <Lesson12 /> */}
-      <Consultation05 />
-    </>
+      {/* <Consultation05 /> */}
+    </BrowserRouter>
   );
 }
 
