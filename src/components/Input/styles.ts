@@ -19,7 +19,8 @@ export const InputComponent = styled.input`
   outline: none;
   border: 1px solid black;
   border - radius: 4px;
-  font - size: 16px;
+  font-size: 16px;
+  border-radius: 10px;
 
   &::placeholder {
     color: #6f6f6f;

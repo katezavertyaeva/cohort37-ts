@@ -26,6 +26,8 @@ import Weather from 'pages/Weather/Weather';
 // import Homework08 from 'homeworks/Homework08/Homework08';
 // import Homework09 from 'homeworks/Homework09/Homework09';
 // import Homework11 from 'homeworks/Homework11/Homework11';
+import Homework14 from 'homeworks/Homeworks14/Homework14';
+
 
 // Consultations
 // import Consultation04 from 'consultations/Consultation04/Consultation04';
@@ -64,7 +66,8 @@ function App() {
       {/* <Lesson12 /> */}
       {/* <Consultation05 /> */}
       {/* <Lesson14 /> */}
-      <Weather />
+      <Homework14 />
+      {/* <Weather /> */}
     </BrowserRouter>
   );
 }
